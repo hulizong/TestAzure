@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0
+    }
+
+    #mains {
+        overflow: hidden;
+    }
+
+    .box {
+        padding: 5px 0 0 5px;
+        float: left;
+    }
+
+    .pic {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #cc2;
+    }
+
+        .pic img {
+            width: 345px;
+            height: auto
+        }
+
+        .pic span {
+            margin-left: 170px;
+        }
+</style>
+<div id="mains">
+    @*<div class="box">
+            <div class="pic">
+                <img  data-original="/背景/winter scene - Grand Teton National Park - 1-12-19  03.jpg" src="/背景/winter scene - Grand Teton National Park - 1-12-19  03.jpg" />
+                <span>213</span>
+            </div>
+        </div>*@
+
+</div>
+
+<script type="text/javascript">
+
+
+    waterfall("mains", "box");
+    var dataInt = { "data": [{ "src": "奇迹轮.jpg" }, { "src": "winter scene - Grand Teton National Park - 1-12-19  03.jpg" }, { "src": "Angry sky in the valley 2.jpg" }] }
+
+    var oParent = document.getElementById("mains");
+    for (var i = 0; i < dataInt.data.length; i++) {
+        var oBox = document.createElement("div");
+        oBox.className = 'box';
+        oParent.appendChild(oBox);
+        var oPic = document.createElement("div");
+        oPic.className = "pic";
+        oBox.appendChild(oPic);
+        
+
+        var oImg = document.createElement("img");
+        oImg.id = 1;
+        oImg.setAttribute("alt", "/背景/" + dataInt.data[i].src);
+        oImg.setAttribute("onclick","Photos(1)")
+        oImg.src = "/背景/" + dataInt.data[i].src;
+        oPic.appendChild(oImg);
+
+        var oSpan = document.createElement("span");
+        oSpan.innerText = "12313";
+        oPic.appendChild(oSpan);
+
+    }
+    waterfall("mains", "box");
+
+
+    function waterfall(parent, box) {
+        var oParent = document.getElementById(parent);
+        var oBoxs = getByClass(oParent, box);
+        var oBoxW = 345;//oBoxs[0].offsetWidth;
+        var cols = Math.floor(document.documentElement.clientWidth / oBoxW);
+        oParent.style.cssText = "width:" + oBoxW * cols + "px;margin:0 auto";
+        var hArr = [];
+
+        ////当拉宽/窄浏览器后，再滚动图片会出现图片重叠的bug.
+        ////原因：当拉宽/窄浏览器后，某些已经使用了position定位的图片节点不能恢复到第一排，因为第一排不能有绝对定位的样式，所以在判断不是第一排加绝对定位之前要把前面所有设置过的样式全部清零。
+        ////增加如下代码：
+        //for (var i = 0; i < oBoxs.length; i++){
+        //	oBoxs[i].style="";
+        //}
+        ////如果全部清零可能会拖慢性能，最好设置一个较大的数，如15或者更大一点的就可以了，不用全部清零，如下代码：
+        //for (var i = 0; i < 15; i++) {
+        //    oBoxs[i].style = "";
+        //}
+
+
+        for (var i = 0; i < oBoxs.length; i++) {
+            if (i < cols) {
+                hArr.push(oBoxs[i].offsetHeight);
+            } else {
+                var minH = Math.min.apply(null, hArr);
+                var index = getMinhIndex(hArr, minH);
+                oBoxs[i].style.position = "absolute";
+                oBoxs[i].style.top = minH + "px";
+                oBoxs[i].style.left = oBoxs[index].offsetLeft + "px";
+                hArr[index] += oBoxs[i].offsetHeight;
+            }
+        }
+
+    }
+    function getMinhIndex(arr, val) {
+        for (var i in arr) {
+            if (arr[i] == val) {
+                return i;
+            }
+        }
+    }
+    function checkScrollSlide() {
+        var oParent = document.getElementById("mains");
+        var oBoxs = getByClass(oParent, "box");
+        var lastBoxH = oBoxs[oBoxs.length - 1].offsetTop + Math.floor(oBoxs[oBoxs.length - 1].offsetHeight / 2);
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.body.clientHeight || document.documentElement.clientHeight;
+        return (lastBoxH < scrollTop + height) ? true : false;
+    }
+    function getByClass(parent, clsName) {
+        var boxArr = [],
+            oElements = parent.getElementsByTagName("*");
+        for (var i = 0; i < oElements.length; i++) {
+            if (oElements[i].className == clsName) {
+                boxArr.push(oElements[i]);
+            }
+        }
+        return boxArr;
+    }
+
+    function Photos(Id) {
+        //$.post("/Album/Photo", { Id: Id }, function (data) {
+        //    if (true) {
+                
+        //    }
+        //});
+        window.location.href = "/Album/Photo?Id=" + Id;
+    }
+</script>

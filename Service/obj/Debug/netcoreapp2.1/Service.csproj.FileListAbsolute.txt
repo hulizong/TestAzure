@@ -1,0 +1,16 @@
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\Service.deps.json
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\Service.dll
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\Service.pdb
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\Common.dll
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\Model.dll
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\System.Net.Http.Formatting.dll
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\Common.pdb
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\Model.pdb
+C:\Users\RMB\Desktop\Share-master\Web\Service\bin\Debug\netcoreapp2.1\System.Net.Http.Formatting.xml
+C:\Users\RMB\Desktop\Share-master\Web\Service\obj\Debug\netcoreapp2.1\Service.csprojAssemblyReference.cache
+C:\Users\RMB\Desktop\Share-master\Web\Service\obj\Debug\netcoreapp2.1\Service.csproj.CoreCompileInputs.cache
+C:\Users\RMB\Desktop\Share-master\Web\Service\obj\Debug\netcoreapp2.1\Service.AssemblyInfoInputs.cache
+C:\Users\RMB\Desktop\Share-master\Web\Service\obj\Debug\netcoreapp2.1\Service.AssemblyInfo.cs
+C:\Users\RMB\Desktop\Share-master\Web\Service\obj\Debug\netcoreapp2.1\Service.csproj.CopyComplete
+C:\Users\RMB\Desktop\Share-master\Web\Service\obj\Debug\netcoreapp2.1\Service.dll
+C:\Users\RMB\Desktop\Share-master\Web\Service\obj\Debug\netcoreapp2.1\Service.pdb

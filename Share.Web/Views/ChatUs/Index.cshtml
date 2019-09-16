@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "工作组";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <span class="col-5">&nbsp;</span>
+        <span style="font:600 16px '微软雅黑'">工作讨论组</span>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-4">&nbsp;</div>
+
+        <div class="col-6">
+            @if (Model.Name != null)
+            {
+                <span>用户：</span><input type = "text" id = "userInput" readonly= "readonly"  value = "@Model.Name" />
+            }
+            else
+            {
+                <span>用户：</span><input type="text" id="userInput" readonly="readonly" value="默认用户" />
+            }
+
+
+            <br />
+            信息：<input type="text" id="messageInput" />
+            <input type="button" id="sendButton" value="发送" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+

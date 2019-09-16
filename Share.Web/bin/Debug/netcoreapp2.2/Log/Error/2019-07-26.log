@@ -1,0 +1,8 @@
+NLog: 11:23:40 | ERROR | |System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.Convert.FromBase64String(String s)
+   at Share.Web.Controllers.BaseController.get_login() in C:\Users\RMB\Desktop\Share-master\Web\Share.Web\Controllers\BaseController.cs:line 40
+NLog: 11:23:40 | ERROR | |System.ArgumentNullException: Value cannot be null.
+Parameter name: s
+   at System.Convert.FromBase64String(String s)
+   at Share.Web.Controllers.BaseController.get_login() in C:\Users\RMB\Desktop\Share-master\Web\Share.Web\Controllers\BaseController.cs:line 40
