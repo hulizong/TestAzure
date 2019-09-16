@@ -1,7 +1,6 @@
 C:\Users\RMB\Desktop\Share-master\Web\Model\bin\Debug\netcoreapp2.1\Model.deps.json
 C:\Users\RMB\Desktop\Share-master\Web\Model\bin\Debug\netcoreapp2.1\Model.dll
 C:\Users\RMB\Desktop\Share-master\Web\Model\bin\Debug\netcoreapp2.1\Model.pdb
-C:\Users\RMB\Desktop\Share-master\Web\Model\obj\Debug\netcoreapp2.1\Model.csprojAssemblyReference.cache
 C:\Users\RMB\Desktop\Share-master\Web\Model\obj\Debug\netcoreapp2.1\Model.csproj.CoreCompileInputs.cache
 C:\Users\RMB\Desktop\Share-master\Web\Model\obj\Debug\netcoreapp2.1\Model.AssemblyInfoInputs.cache
 C:\Users\RMB\Desktop\Share-master\Web\Model\obj\Debug\netcoreapp2.1\Model.AssemblyInfo.cs

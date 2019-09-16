@@ -30,7 +30,7 @@ namespace Share.Admin.Controllers
                 return null;
             }
             //查询导航数据
-            string menuValue = MenuService.GetMenuDate(managerModel.Id);
+            string menuValue = "";//MenuService.GetMenuDate(managerModel.Id);
             //return Ok(menuValue);
             return Json(menuValue);
         }
